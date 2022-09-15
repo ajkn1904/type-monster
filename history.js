@@ -36,7 +36,7 @@ function displayHistory() {
 
   <p>You took: <span class="bold">${test?.minutes ? test.minutes +"</span> minutes<span class='bold'>"  : 0 +"</span> minute"} </span> <span class="bold">${test?.seconds ? test.seconds +"</span> seconds<span class='bold'>"  : 0 +"</span> second"}</p>
 
-  <p>You made <span class="bold red">${(test.errorCount != 0) ? test.errorCount +"</span> mistakes <span class='bold'>"  : test.errorCount +"</span> mistake"}</p>
+  <p>You made <span class="bold red">${(test.errorCount >= 2) ? test.errorCount +"</span> mistakes <span class='bold'>"  : test.errorCount +"</span> mistake"}</p>
   <p><span class="bold">${test.date}</span></p>
   `;
 

@@ -92,7 +92,7 @@ const gameOver = () => {
 
     <p>You took: <span class="bold">${(timeTaken <= 60) ? timeTaken : (timeInMinSpent +"</span> minutes <span class='bold'>"+ timeInSecSpent)}</span> seconds</p>
 
-      <p>You made <span class="bold red">${(errorCount != 0) ? errorCount +"</span> mistakes <span class='bold'>"  : errorCount +"</span> mistake"}</p>
+      <p>You made <span class="bold red">${(errorCount >= 2) ? errorCount +"</span> mistakes <span class='bold'>"  : errorCount +"</span> mistake"}</p>
       
     <p><span class="bold">${date}</span></p>
     <br>
