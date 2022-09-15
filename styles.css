@@ -124,11 +124,12 @@ body {
   display: block;
 }
 
-.buttons, .home-buttons{
+.buttons, .home-buttons, .added-buttons{
   display: flex;
   justify-content: center;
   margin: 30px 0;
 }
+
 button, #home-btn {
   padding: 10px 20px;
   border: none;
@@ -142,10 +143,30 @@ button, #home-btn {
   border: 2px solid #9dffad;
   cursor: pointer;
 }
+
+#added-btns{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; 
+}
+
+#clear-history, #new-text, #blog{
+  padding: 0px;
+  width: 200px;
+  margin: 0;
+}
+
 a, #home-btn-an{
   text-decoration: none;
   color: white;
 }
+
+#home-btn{
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
 #histories {
   display: flex;
   flex-wrap: wrap;
@@ -172,11 +193,6 @@ a, #home-btn-an{
   margin-bottom: 30px;
 }
 
-#blog, #home-btn{
-  margin-top: 50px;
-  margin-bottom: 50px;
-}
-
 #modal-background {
   background: rgb(255, 255, 255);
   background: linear-gradient(
@@ -199,6 +215,7 @@ footer{
   color: white; 
   width: 100%; 
   height:70px;
+  margin-top: 80px;
 }
 
 @media only screen and (max-width: 767px) {
@@ -209,6 +226,15 @@ footer{
   .card {
     flex-direction: column;
   }
+  #added-btns{
+ 
+    gap: 8; 
+  }
+  .added-buttons{
+    margin: 10px 0;
+    width: 120px;
+  }
+  
 }
 @media only screen and (min-width: 768px){
   #histories {

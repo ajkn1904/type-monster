@@ -16,10 +16,16 @@
 
   </head>
   <body>
-    <header>
+    <header class="my-5">
         <h1 class="title"><img src="./logo.png" /><br>
-        Welcome To Type Master Blog!</h1>
+        Welcome To The Blog!</h1>
     </header>
+
+  <div class="home-buttons">
+      <button id="home-btn"><a id="home-btn-an" href="index.html">HOME</a></button>
+  </div>
+
+ 
     <section class="container my-5">
         <div class="accordion" id="accordionBlog">
             <div class="accordion-item">
@@ -30,11 +36,12 @@
               </h2>
               <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionBlog">
                 <div class="accordion-body">
-                    localStorage is similar to sessionStorage. Their main difference is that  <strong> local storage data does not expire, whereas session storage data gets cleared when the user closes its browser.</strong> Whenever a document is loaded in a particular tab in the browser, a unique page session gets created and assigned to that particular tab.
+                    localStorage is similar to sessionStorage. But, their main difference is that  <strong> local storage data does not expire, whereas session storage data gets cleared when the user closes its browser.</strong> Whenever a document is loaded in a particular tab in the browser, a unique page session gets created and assigned to that particular tab.
                 </div>
               </div>
             </div>
 
+            <br>
 
             <div class="accordion-item">
               <h2 class="accordion-header" id="headingTwo">
@@ -44,11 +51,12 @@
               </h2>
               <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionBlog">
                 <div class="accordion-body">
-                    A block is a piece of code inside a set of curly braces {} and groups code statements together. The difference between global scope & block scope is In JavaScript, a variable can be one of three different scopes, global, local, and block. <strong>The global variables can be accessed by any line of code in the program, including inside blocks while locally scoped ones are only visible within the function they are declared. </strong> 
+                    In JavaScript, a variable can be one of three different scopes, global, local, and block. The difference between global scope & block scope is, <strong>the global variables can be accessed by any line of code in the program, including inside blocks while locally scoped ones are only visible within the function they are declared.</strong> 
                 </div>
               </div>
             </div>
-
+            
+            <br>
             
             <div class="accordion-item">
                 <h2 class="accordion-header" id="headingThree">
@@ -64,6 +72,7 @@
                 </div>
             </div>
             
+            <br>            
             
             <div class="accordion-item">
               <h2 class="accordion-header" id="headingFour">
@@ -85,15 +94,11 @@
           </div>
     </section>
 
-    <div class="home-buttons">
-        <button id="home-btn"><a id="home-btn-an" href="index.html">HOME</a></button>
-    </div>
-
-    
+ 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 
   </body>
-  <footer style="position:absolute; top:700px; height:70px;">
+  <footer class="mt-5" style="position:absolute; top:830px; height:70px;">
     <small>@ 2022 | Anika Jumana Khanam</small>
   </footer>
   </html>

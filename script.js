@@ -123,10 +123,16 @@ const start = () => {
       display.classList.remove("inactive");
 
       clearInterval(startCountdown);
-      startTime = new Date().getTime();
+      startTime = new Date().getTime();     
+      
+      countdownOverlay.innerHTML = '';
+
     }
     count--;
   }, 1000);
+  
+  countdownOverlay.style.visibility = "visible";
+  
 };
 
 // START Countdown
@@ -143,3 +149,8 @@ setInterval(() => {
 
   document.getElementById("show-time").innerHTML = `${startTime ? timeSpent : 0} seconds`;
 }, 1000);
+
+// loading new question
+const newText = () => {
+  location.reload();
+}

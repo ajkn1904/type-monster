@@ -38,3 +38,13 @@ function displayHistory() {
     histories.appendChild(newRow);
   });
 }
+
+//Clear history
+const clearHistorey = () => {
+  const confirmation =  confirm("Your history will be permanently deleted.")
+  if(confirmation){
+    localStorage.clear();
+    histories.innerHTML = "";
+  }
+  return;
+}
