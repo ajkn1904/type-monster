@@ -71,6 +71,11 @@ const gameOver = () => {
   // so total time taken is current time - start time
   const finishTime = new Date().getTime();
   const timeTaken = Math.round((finishTime - startTime) / 1000);
+  
+  const timeInMinSpent = parseInt(timeTaken / 60);
+  const timeInSecSpent = (timeTaken % 60);
+
+
   const date =  new Date().getDate() +"-" + new Date().getMonth() +"-" + new Date().getFullYear();
 
   // show result modal
@@ -84,13 +89,17 @@ const gameOver = () => {
   // show result
   resultModal.innerHTML += `
     <h1>Finished!</h1>
-    <p>You took: <span class="bold">${timeTaken}</span> seconds</p>
-    <p>You made <span class="bold red">${errorCount}</span> mistakes</p>
+
+    <p>You took: <span class="bold">${(timeTaken <= 60) ? timeTaken : (timeInMinSpent +"</span> minutes <span class='bold'>"+ timeInSecSpent)}</span> seconds</p>
+
+      <p>You made <span class="bold red">${(errorCount != 0) ? errorCount +"</span> mistakes <span class='bold'>"  : errorCount +"</span> mistake"}</p>
+      
     <p><span class="bold">${date}</span></p>
+    <br>
     <button onclick="closeModal()">Close</button>
   `;
 
-  addHistory(questionText, timeTaken, errorCount, date);
+  addHistory(questionText, ((timeTaken <= 60) ? timeTaken : (timeInMinSpent +" minutes "+ timeInSecSpent)), errorCount, date, timeInMinSpent, timeInSecSpent);
 
   // restart everything
   startTime = null;

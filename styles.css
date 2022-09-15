@@ -226,13 +226,10 @@ footer{
   .card {
     flex-direction: column;
   }
-  #added-btns{
- 
-    gap: 8; 
-  }
+
   .added-buttons{
     margin: 10px 0;
-    width: 120px;
+    width: 100px;
   }
   
 }
